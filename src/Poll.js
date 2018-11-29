@@ -35,9 +35,20 @@ class Poll extends Component {
     }
   }
 
-  componentDidMount(){
+  componentWillReceiveProps(nextProps){
+    if(nextProps.json.id !== this.props.json.id){
+      this.setState({
+        votes: nextProps.json.answer.options.length || 0,
+        title: nextProps.json.title || "",
+        dateItem: nextProps.json.publishedDate || 0,
+        graphData:{}
+      })
+      this.updateData(nextProps.json);
+    }
+  }
+
+  updateData(json) {
     let colors = ['#e66c1e','#103a6d','#77aac6','#bd2130','#17a2b8','#ffc107','#d39e00'];
-    
     let gData = {
       labels: [],
       datasets: [
@@ -49,13 +60,17 @@ class Poll extends Component {
           ],
         }],
     };
-    this.props.json.answer.options.map((item,i) => {
+    json.answer.options.map((item,i) => {
       gData.labels.push(item.label);
       gData.datasets[0].data.push(1);
       gData.datasets[0].backgroundColor.push(colors[i]);
       gData.datasets[0].hoverBackgroundColor.push(colors[i]);
-    })
+    });
     this.setState({graphData:gData})
+  }
+
+  componentDidMount(){
+    this.updateData(this.props.json);
   }
 
   handleClick(key){
@@ -69,7 +84,7 @@ class Poll extends Component {
 
   render() {
     const {graphData, votes, dateItem,title} = this.state;
-
+    const colors = ['#e66c1e','#103a6d','#77aac6','#bd2130','#17a2b8','#ffc107','#d39e00'];
     let pollTitleDiv = {
       padding:'10px',
       textAlign:'left',
@@ -108,13 +123,13 @@ class Poll extends Component {
       buttonList.push (
         <Button
           key={"button-" + item.id}
-          style={{color:'white',background:'#e66c1e',border:'0px',marginRight:'10px'}}
+          style={{color:'white',background:colors[i],border:'0px',marginRight:'10px'}}
             onClick={() => self.handleClick(item.label)} 
             size="sm">
           <strong>{item.label}</strong>
         </Button>
       )
-    });
+    })
     return (
       <Row>
         <Col xs="12" sm="6">
