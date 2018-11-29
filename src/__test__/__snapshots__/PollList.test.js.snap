@@ -1,0 +1,707 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PollList renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PollList />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Col
+          sm="4"
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+          xs="12"
+        >
+          <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#77aac6",
+                      "#d95e07",
+                    ],
+                    "data": Array [
+                      50,
+                      50,
+                    ],
+                    "hoverBackgroundColor": Array [
+                      "#77aac6",
+                      "#d95e07",
+                    ],
+                  },
+                ],
+              }
+            }
+          />
+        </Col>,
+        <Col
+          sm="8"
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+          xs="12"
+        >
+          <div
+            id="pollTitleDiv"
+            style={
+              Object {
+                "color": "rgba(16, 58, 109, 0.85)",
+                "padding": "10px",
+                "textAlign": "left",
+              }
+            }
+          >
+            <i
+              aria-hidden="true"
+              className="fa fa-comment"
+            />
+            <span
+              style={
+                Object {
+                  "fontSize": "22px",
+                  "fontWeight": "600",
+                  "marginLeft": "10px",
+                }
+              }
+            >
+              22 Jan 2018
+            </span>
+          </div>
+          <div
+            id="pollHeadingDiv"
+            style={
+              Object {
+                "padding": "0px 20px 20px 30px",
+                "textAlign": "left",
+              }
+            }
+          >
+            <span>
+              Is bitcoin worth the time and money that mining requires?
+            </span>
+          </div>
+        </Col>,
+        <hr />,
+      ],
+      "tag": "div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Doughnut
+            data={
+              Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#77aac6",
+                      "#d95e07",
+                    ],
+                    "data": Array [
+                      50,
+                      50,
+                    ],
+                    "hoverBackgroundColor": Array [
+                      "#77aac6",
+                      "#d95e07",
+                    ],
+                  },
+                ],
+              }
+            }
+          />,
+          "sm": "4",
+          "tag": "div",
+          "widths": Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+          "xs": "12",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "data": Object {
+              "datasets": Array [
+                Object {
+                  "backgroundColor": Array [
+                    "#77aac6",
+                    "#d95e07",
+                  ],
+                  "data": Array [
+                    50,
+                    50,
+                  ],
+                  "hoverBackgroundColor": Array [
+                    "#77aac6",
+                    "#d95e07",
+                  ],
+                },
+              ],
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <div
+              id="pollTitleDiv"
+              style={
+                Object {
+                  "color": "rgba(16, 58, 109, 0.85)",
+                  "padding": "10px",
+                  "textAlign": "left",
+                }
+              }
+            >
+              <i
+                aria-hidden="true"
+                className="fa fa-comment"
+              />
+              <span
+                style={
+                  Object {
+                    "fontSize": "22px",
+                    "fontWeight": "600",
+                    "marginLeft": "10px",
+                  }
+                }
+              >
+                22 Jan 2018
+              </span>
+            </div>,
+            <div
+              id="pollHeadingDiv"
+              style={
+                Object {
+                  "padding": "0px 20px 20px 30px",
+                  "textAlign": "left",
+                }
+              }
+            >
+              <span>
+                Is bitcoin worth the time and money that mining requires?
+              </span>
+            </div>,
+          ],
+          "sm": "8",
+          "tag": "div",
+          "widths": Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+          "xs": "12",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "pollTitleDiv",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  aria-hidden="true"
+                  className="fa fa-comment"
+                />,
+                <span
+                  style={
+                    Object {
+                      "fontSize": "22px",
+                      "fontWeight": "600",
+                      "marginLeft": "10px",
+                    }
+                  }
+                >
+                  22 Jan 2018
+                </span>,
+              ],
+              "id": "pollTitleDiv",
+              "style": Object {
+                "color": "rgba(16, 58, 109, 0.85)",
+                "padding": "10px",
+                "textAlign": "left",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-hidden": "true",
+                  "className": "fa fa-comment",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "22 Jan 2018",
+                  "style": Object {
+                    "fontSize": "22px",
+                    "fontWeight": "600",
+                    "marginLeft": "10px",
+                  },
+                },
+                "ref": null,
+                "rendered": "22 Jan 2018",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "pollHeadingDiv",
+            "nodeType": "host",
+            "props": Object {
+              "children": <span>
+                Is bitcoin worth the time and money that mining requires?
+              </span>,
+              "id": "pollHeadingDiv",
+              "style": Object {
+                "padding": "0px 20px 20px 30px",
+                "textAlign": "left",
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Is bitcoin worth the time and money that mining requires?",
+              },
+              "ref": null,
+              "rendered": "Is bitcoin worth the time and money that mining requires?",
+              "type": "span",
+            },
+            "type": "div",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Col
+            sm="4"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="12"
+          >
+            <Doughnut
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#77aac6",
+                        "#d95e07",
+                      ],
+                      "data": Array [
+                        50,
+                        50,
+                      ],
+                      "hoverBackgroundColor": Array [
+                        "#77aac6",
+                        "#d95e07",
+                      ],
+                    },
+                  ],
+                }
+              }
+            />
+          </Col>,
+          <Col
+            sm="8"
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+            xs="12"
+          >
+            <div
+              id="pollTitleDiv"
+              style={
+                Object {
+                  "color": "rgba(16, 58, 109, 0.85)",
+                  "padding": "10px",
+                  "textAlign": "left",
+                }
+              }
+            >
+              <i
+                aria-hidden="true"
+                className="fa fa-comment"
+              />
+              <span
+                style={
+                  Object {
+                    "fontSize": "22px",
+                    "fontWeight": "600",
+                    "marginLeft": "10px",
+                  }
+                }
+              >
+                22 Jan 2018
+              </span>
+            </div>
+            <div
+              id="pollHeadingDiv"
+              style={
+                Object {
+                  "padding": "0px 20px 20px 30px",
+                  "textAlign": "left",
+                }
+              }
+            >
+              <span>
+                Is bitcoin worth the time and money that mining requires?
+              </span>
+            </div>
+          </Col>,
+          <hr />,
+        ],
+        "tag": "div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Doughnut
+              data={
+                Object {
+                  "datasets": Array [
+                    Object {
+                      "backgroundColor": Array [
+                        "#77aac6",
+                        "#d95e07",
+                      ],
+                      "data": Array [
+                        50,
+                        50,
+                      ],
+                      "hoverBackgroundColor": Array [
+                        "#77aac6",
+                        "#d95e07",
+                      ],
+                    },
+                  ],
+                }
+              }
+            />,
+            "sm": "4",
+            "tag": "div",
+            "widths": Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ],
+            "xs": "12",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "data": Object {
+                "datasets": Array [
+                  Object {
+                    "backgroundColor": Array [
+                      "#77aac6",
+                      "#d95e07",
+                    ],
+                    "data": Array [
+                      50,
+                      50,
+                    ],
+                    "hoverBackgroundColor": Array [
+                      "#77aac6",
+                      "#d95e07",
+                    ],
+                  },
+                ],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <div
+                id="pollTitleDiv"
+                style={
+                  Object {
+                    "color": "rgba(16, 58, 109, 0.85)",
+                    "padding": "10px",
+                    "textAlign": "left",
+                  }
+                }
+              >
+                <i
+                  aria-hidden="true"
+                  className="fa fa-comment"
+                />
+                <span
+                  style={
+                    Object {
+                      "fontSize": "22px",
+                      "fontWeight": "600",
+                      "marginLeft": "10px",
+                    }
+                  }
+                >
+                  22 Jan 2018
+                </span>
+              </div>,
+              <div
+                id="pollHeadingDiv"
+                style={
+                  Object {
+                    "padding": "0px 20px 20px 30px",
+                    "textAlign": "left",
+                  }
+                }
+              >
+                <span>
+                  Is bitcoin worth the time and money that mining requires?
+                </span>
+              </div>,
+            ],
+            "sm": "8",
+            "tag": "div",
+            "widths": Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ],
+            "xs": "12",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "pollTitleDiv",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    aria-hidden="true"
+                    className="fa fa-comment"
+                  />,
+                  <span
+                    style={
+                      Object {
+                        "fontSize": "22px",
+                        "fontWeight": "600",
+                        "marginLeft": "10px",
+                      }
+                    }
+                  >
+                    22 Jan 2018
+                  </span>,
+                ],
+                "id": "pollTitleDiv",
+                "style": Object {
+                  "color": "rgba(16, 58, 109, 0.85)",
+                  "padding": "10px",
+                  "textAlign": "left",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "fa fa-comment",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "22 Jan 2018",
+                    "style": Object {
+                      "fontSize": "22px",
+                      "fontWeight": "600",
+                      "marginLeft": "10px",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "22 Jan 2018",
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "pollHeadingDiv",
+              "nodeType": "host",
+              "props": Object {
+                "children": <span>
+                  Is bitcoin worth the time and money that mining requires?
+                </span>,
+                "id": "pollHeadingDiv",
+                "style": Object {
+                  "padding": "0px 20px 20px 30px",
+                  "textAlign": "left",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Is bitcoin worth the time and money that mining requires?",
+                },
+                "ref": null,
+                "rendered": "Is bitcoin worth the time and money that mining requires?",
+                "type": "span",
+              },
+              "type": "div",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

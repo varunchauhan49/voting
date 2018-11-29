@@ -7,21 +7,12 @@ import { Row, Col, Button } from 'reactstrap';
 
 const doughnut = {
   labels: [
-    'Red',
-    'Green',
-    'Yellow',
+    'Yes',
+    'No'
   ],
-  options: {
-    legend: {
-       display: false
-    },
-    tooltips: {
-       enabled: false
-    }
-},
   datasets: [
     {
-      data: [34,66],
+      data: [1,1],
       backgroundColor: [
         '#e66c1e',
         '#103a6d',
@@ -37,11 +28,47 @@ class Poll extends Component {
   constructor(props,context){
     super(props,context);
     this.state = {
-      votes: props.votes || 0
+      votes: props.json.answer.options.length || 0,
+      title: props.json.title || "",
+      dateItem: props.json.publishedDate || 0,
+      graphData:{}
     }
   }
+
+  componentDidMount(){
+    let colors = ['#e66c1e','#103a6d','#77aac6','#bd2130','#17a2b8','#ffc107','#d39e00'];
+    
+    let gData = {
+      labels: [],
+      datasets: [
+        {
+          data: [],
+          backgroundColor: [
+          ],
+          hoverBackgroundColor: [
+          ],
+        }],
+    };
+    this.props.json.answer.options.map((item,i) => {
+      gData.labels.push(item.label);
+      gData.datasets[0].data.push(1);
+      gData.datasets[0].backgroundColor.push(colors[i]);
+      gData.datasets[0].hoverBackgroundColor.push(colors[i]);
+    })
+    this.setState({graphData:gData})
+  }
+
+  handleClick(key){
+    let {votes,graphData} = this.state;
+    let index = graphData.labels.indexOf(key);
+    graphData.datasets[0].data[index] = graphData.datasets[0].data[index] + 1;
+
+    this.setState({votes: votes + 1,
+      graphData: graphData})
+  }
+
   render() {
-    const {votes} = this.state;
+    const {graphData, votes, dateItem,title} = this.state;
 
     let pollTitleDiv = {
       padding:'10px',
@@ -72,9 +99,22 @@ class Poll extends Component {
       fontSize:'13px',
       fontWeight:'500'
     }
-    let currDate = new Date(1516605447 * 1000);
+    let currDate = new Date(dateItem * 1000);
     let monthsArr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     let dateString = currDate.getDate() + ' ' + monthsArr[currDate.getMonth()] + ' ' + currDate.getFullYear()
+    let self = this;
+    let buttonList = [];
+    this.props.json.answer.options.map((item,i) => {
+      buttonList.push (
+        <Button
+          key={"button-" + item.id}
+          style={{color:'white',background:'#e66c1e',border:'0px',marginRight:'10px'}}
+            onClick={() => self.handleClick(item.label)} 
+            size="sm">
+          <strong>{item.label}</strong>
+        </Button>
+      )
+    });
     return (
       <Row>
         <Col xs="12" sm="6">
@@ -83,25 +123,20 @@ class Poll extends Component {
             <span style={pollTitleCss}>Today's Poll</span>
           </div>
           <div id="pollHeadingDiv" key="pollHeadingDiv" style={pollHeadingDiv}>
-            <span>Is bitcoin worth the time and money that mining requires?</span>
+            <span>{title}</span>
             <strong style={dateCss}>
               {dateString}
             </strong>
           </div>
           <div id="voteButton" style={voteButtonCss}>
-            <Button style={{color:'white',background:'#e66c1e',border:'0px'}} size="sm">
-              <strong>Yes</strong>
-            </Button>
-            <Button style={{color:'white',background:'#103a6d',border:'0px'}} size="sm">
-              <strong>No</strong>
-            </Button>
+            {buttonList}
           </div>
           <div id="totalVotes" key="totalVotes" style={totalVotes}>
             <span>Total number of votes recorded: {votes}</span>
           </div>
         </Col>
         <Col xs="12" sm="6">
-          <Doughnut data={doughnut}  />
+          <Doughnut data={graphData} redraw={true}  />
         </Col>
         <hr />
       </Row>
